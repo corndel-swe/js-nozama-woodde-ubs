@@ -1,6 +1,5 @@
-import { describe, test } from 'mocha'
+import { describe, test, after } from 'mocha'
 import assert from 'assert'
-import knex from 'knex'
 
 describe('Day 1 Exercise 2', function () {
   let dbModule
@@ -25,15 +24,11 @@ describe('Day 1 Exercise 2', function () {
   })
 
   test('db connection shuold connect successfully to db/db.sqlite', async function () {
-    try {
-      const hasUsersTable = await db.schema.hasTable('users')
-      assert.strictEqual(
-        hasUsersTable,
-        true,
-        'The database does not have the expected "users" table'
-      )
-    } finally {
-      await db.destroy()
-    }
+    const hasUsersTable = await db.schema.hasTable('users')
+    assert.strictEqual(
+      hasUsersTable,
+      true,
+      'The database does not have the expected "users" table'
+    )
   })
 })

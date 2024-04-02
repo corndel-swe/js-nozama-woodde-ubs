@@ -15,8 +15,9 @@ describe('Day 1 Exercise 1', function () {
   })
 
   test('the db.sqlite file should have a table named "users"', async function () {
-    const db = knex(config)
+    let db
     try {
+      db = knex(config)
       const tableExists = await db.schema.hasTable('users')
       assert.strictEqual(tableExists, true)
     } finally {
@@ -25,8 +26,9 @@ describe('Day 1 Exercise 1', function () {
   })
 
   test('the "users" table should contain some seed data', async function () {
-    const db = knex(config)
+    let db
     try {
+      db = knex(config)
       const users = await db('users').select()
       assert.ok(users.length > 0, 'No users found in the "users" table')
     } finally {
