@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "db:reset": "sqlite3 db/db.sqlite < db/migrations/1-reset.sql",
-    "db:seed": "sqlite3 db/db.sqlite < db/migrations/2-seed.sql"
+    "db:seed": "sqlite3 db/db.sqlite < db/migrations/2-seed.sql",
+    "test": "mocha ./tests",
+    "test:d1e1": "mocha ./tests/d1e1.test.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,6 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.4.1"
+    "mocha": "^10.4.0"
   }
 }
