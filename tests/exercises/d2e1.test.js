@@ -1,7 +1,7 @@
 import assert from 'assert'
 import supertest from 'supertest'
 import { describe, it } from 'mocha'
-import app from '../exercises/d2e1.js'
+import app from '../../exercises/d2e1.js'
 
 const request = supertest(app)
 

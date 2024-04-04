@@ -6,7 +6,7 @@ describe('Day 1 Exercise 2', function () {
   let db
 
   before(async function () {
-    dbModule = await import('../db/index.js')
+    dbModule = await import('../../db/index.js')
     db = dbModule.default
   })
 

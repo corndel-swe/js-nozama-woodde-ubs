@@ -29,7 +29,8 @@ app.post('/alarms', (req, res) => {
   // TODO
   // Adds a new alarm to the list
   // The new alarm will be sent in the request body as a JSON object
-  // Remember to set the appropriate status code
+  // Push it onto the end of the `alarms` array
+  // Remember to set the appropriate status code in your response
 })
 
 // don't change below

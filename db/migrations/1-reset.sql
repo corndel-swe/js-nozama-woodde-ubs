@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS reviews (
     userId INTEGER NOT NULL,
     rating INTEGER NOT NULL CHECK (rating >= 1 AND rating <= 5),
     reviewText TEXT NOT NULL,
-    reviewDate DATETIME NOT NULL,
+    reviewDate DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (productId) REFERENCES products (id) ON DELETE CASCADE,
     FOREIGN KEY (userId) REFERENCES users (id) ON DELETE CASCADE
 );
