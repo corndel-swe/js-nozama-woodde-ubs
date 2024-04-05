@@ -105,6 +105,25 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
+  /users/{userId}:
+    delete:
+      tags:
+        - User
+      summary: Delete a user
+      parameters:
+        - in: path
+          name: userId
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the user to delete
+      responses:
+        '204':
+          description: User deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
   /users/login:
     post:
       tags:
@@ -115,17 +134,7 @@ paths:
         content:
           application/json:
             schema:
-              type: object
-              required:
-                - username
-                - password
-              properties:
-                username:
-                  type: string
-                  description: The user's username.
-                password:
-                  type: string
-                  description: The user's password.
+              $ref: '#/components/schemas/User'
       responses:
         '200':
           description: Login successful
