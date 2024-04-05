@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="200px" src="assets/nozama-logo.png" />
+</p>
+
 # Nozama
 
 Welcome to Nozama!

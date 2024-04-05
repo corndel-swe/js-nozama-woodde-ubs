@@ -4,7 +4,7 @@ info:
   description: API for Nozama, an e-commerce platform.
   version: '1.0'
   x-logo:
-    url: 'https://github.com/corndeladmin/swe-js-nozama-api/blob/main/assets/nozama-logo.webp'
+    url: 'https://github.com/corndeladmin/swe-js-nozama-api/blob/main/assets/nozama-logo.png?raw=true'
     altText: Nozama logo
 servers:
   - url: 'https://api.nozama.com/v1'
