@@ -10,8 +10,6 @@ class User {
   static async findById(id) {
     // TODO: finish this method
   }
-
-  // TODO: implement findByFirstName
 }
 
 export default User

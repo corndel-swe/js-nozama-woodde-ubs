@@ -1,7 +1,7 @@
 import express from 'express'
 
 const app = express()
-app.use(express.json())
+app.use(express.json()) // <-- important!
 
 const alarms = [
   {
@@ -16,17 +16,18 @@ const alarms = [
 // don't change above
 
 app.get('/alarms', (req, res) => {
-  // TODO
+  // TODO 1
   // Sends back all the alarms as a JSON response
 })
 
 app.get('/alarms/:index', (req, res) => {
-  // TODO
-  // Sends back the alarm with the given index as a JSON response
+  // TODO 2
+  // Sends back the alarm from the alarms array with the given index as a
+  // JSON response
 })
 
 app.post('/alarms', (req, res) => {
-  // TODO
+  // TODO 3
   // Adds a new alarm to the list
   // The new alarm will be sent in the request body as a JSON object
   // Push it onto the end of the `alarms` array

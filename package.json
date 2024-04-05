@@ -6,9 +6,11 @@
   "main": "index.js",
   "scripts": {
     "db:reset": "sqlite3 db/db.sqlite < db/migrations/1-reset.sql",
+    "dev": "nodemon server/start.js",
+    "start": "node server/start.js",
     "test:d1e1": "mocha ./tests/exercises/d1e1.test.js",
-    "test:d1e2": "mocha --require ./tests/exercises/hooks.js ./tests/exercises/d1e2.test.js",
-    "test:d1e3": "mocha --require ./tests/exercises/hooks.js ./tests/exercises/d1e3.test.js",
+    "test:d1e2": "mocha --require ./tests/hooks.js ./tests/exercises/d1e2.test.js",
+    "test:d1e3": "mocha --require ./tests/hooks.js ./tests/User.test.js",
     "test:d2e1": "mocha ./tests/exercises/d2e1.test.js",
     "test:d2e2": "mocha ./tests/exercises/d2e2.test.js",
     "test:d2e3": "mocha ./tests/exercises/d2e3.test.js"
@@ -24,6 +26,7 @@
   },
   "devDependencies": {
     "mocha": "^10.4.0",
+    "nodemon": "^3.1.0",
     "supertest": "^6.3.4"
   }
 }

@@ -8,66 +8,43 @@ Eventually, these models will serve as the backbone of an API, allowing other
 developers at Nozama to build websites, mobile apps, and other services that use
 the data we have stored in our database.
 
-## Create Product model
+## Backlog
 
-```mermaid
-erDiagram
-  PRODUCTS {
-      string id PK
-      string name
-      string description
-      float price
-      int stockQuantity
-  }
-```
+The backlog for this workshop is available as a
+[Trello board](https://trello.com/b/xKHlc7Xy/nozama). This is a public template.
 
-1. Create a new file `Product.js` in the `models` folder, and create a new class
-   `Product` in it.
+1. One person on your team should create a new board from this template
 
-2. Add the following static methods to the class:
+2. Then add the rest of your team as members.
 
-- `findAll()` - returns an array of all products from the database
-- `findById(productId)` - returns a product with the given id
-- `create(name, description, price, quantity)` - creates a new product with the
-  given data
-- `totalStock()` - returns the total number of products in the warehouse (sum of
-  the stock quantity)
-- `getCategories(productId)` - returns an array of categories for a given
-  product
+You can then use this board to track your progress throughout the workshop.
 
-3. Create a file in the `tests` folder called `Product.test.js` and create some
-   tests to see whether your methods work as expected. You can use
-   `tests/d1e3.test.js` as a reference.
+## Workflow
 
-Remember, you can always `npm run db:reset` and `npm run db:seed` to reset the
-database to its initial state.
+Each item in the backlog has a checklist. You won't be able to complete all the
+items on the checklist today, but you should be able to work on the items
+pertaining to the model layer.
 
-If you would like to practise TDD, you could try writing your tests first.
+The recommended workflow is to:
 
-## Create Reviews model
+1. Decide as a team which items you will work on, and whether you will pair
+   program or not.
 
-```mermaid
-erDiagram
-  REVIEWS {
-    string id PK
-    string productId FK
-    string userId FK
-    int rating
-    string reviewText
-    datetime reviewDate
-  }
-```
+2. Assign the items to team members in Trello and, when you're ready to start
+   work, move the item to "Doing".
 
-1. Create a new file `Review.js` in `models` folder, and create a new class
-   called `Review`.
+3. Create a new branch for the item.
 
-2. Add static methods to `Review`:
+4. Work through the checklist as far as you can. Move it to "Review" and ask a
+   team member to review the code. If the review is accepted, merge the branch.
 
-- `findByProductId` - returns an array of all reviews for a given product
-- `getProductAverage` - returns the average rating for a given product
-- `findByUserId` - returns an array of all reviews for a given user
-- `create` - creates a new review with the given data
-- `findTopPicks` - returns an array of top 3 products based on average rating
+5. If there are still items on the checklist, move it back to "Backlog".
+   Otherwise, move it to "Done".
 
-3. Create a file in the `tests` folder called `Review.test.js` and create some
-   tests to ensure your methods work as expected.
+At any point, if you get stuck, move the item to "Blocked" and do some research,
+ask for help, or move on to another item.
+
+## Testing
+
+If you would like to add tests to your models, you can use the `test` directory.
+Use `tests/User.test.js` as a guide.
