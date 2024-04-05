@@ -1,8 +1,11 @@
 openapi: 3.0.0
 info:
   title: Nozama API
-  description: API for Nozama, a fictional Amazon clone.
+  description: API for Nozama, an e-commerce platform.
   version: '1.0'
+  x-logo:
+    url: 'https://github.com/corndeladmin/swe-js-nozama-api/blob/main/assets/nozama-logo.webp'
+    altText: Nozama logo
 servers:
   - url: 'https://api.nozama.com/v1'
     description: Main production server
