@@ -16,16 +16,12 @@ describe('Day 2 Exercise 1', function () {
     assert.ok(app.listen, 'app does not have a listen method')
   })
 
-  it('GET /ping endpoint should exist and return "pong"', function (done) {
-    request
+  it('GET /ping endpoint should exist and return "pong"', async function () {
+    const res = await request
       .get('/ping')
       .expect(200)
       .expect('Content-Type', /text/)
       .expect('pong')
-      .end((err, res) => {
-        if (err) return done(err)
-        assert.strictEqual(res.text, 'pong', 'Response is not "pong"')
-        done()
-      })
+    assert.strictEqual(res.text, 'pong', 'Response is not "pong"')
   })
 })

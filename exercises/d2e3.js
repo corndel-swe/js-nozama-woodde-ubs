@@ -1,3 +1,5 @@
+// https://tech-docs.corndel.com/express/body-and-headers.html
+
 import express from 'express'
 
 const app = express()
@@ -13,26 +15,25 @@ const alarms = [
     message: 'Go home!'
   }
 ]
-// don't change above
 
 app.get('/alarms', (req, res) => {
-  // TODO 1
-  // Sends back all the alarms as a JSON response
+  /**
+   * Responds with all the alarms as a JSON response
+   */
 })
 
 app.get('/alarms/:index', (req, res) => {
-  // TODO 2
-  // Sends back the alarm from the alarms array with the given index as a
-  // JSON response
+  /**
+   * Responds with the alarm at the given index
+   */
 })
 
 app.post('/alarms', (req, res) => {
-  // TODO 3
-  // Adds a new alarm to the list
-  // The new alarm will be sent in the request body as a JSON object
-  // Push it onto the end of the `alarms` array
-  // Remember to set the appropriate status code in your response
+  /**
+   * Request contains a new alarm in the req.body
+   * Push it to the end of the alarms array
+   * Respond with a 201 status code
+   */
 })
 
-// don't change below
 export default app

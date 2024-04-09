@@ -1,22 +1,28 @@
+// https://tech-docs.corndel.com/express/query-params.html
+// https://tech-docs.corndel.com/express/url-params.html
+
 import express from 'express'
 const app = express()
 
-// Hint: res.send() will not accept numbers - you will need to convert your
-// result to a string before sending it
+/**
+ * Hint: res.send() will not accept numbers - you will need to
+ * convert your result to a string before using res.send()
+ */
 
 app.get('/sumup', (req, res) => {
-  // TODO
-  // Responds with the sum of all numbers from 1 to n
-  // If no param is provided, respond with the number 0
-  // e.g.: GET /sumup?n=5 should respond with '15'
-  // e.g.: GET /sumup should respond with '0'
+  /**
+   * This endpoint accepts a query param, n
+   * res.send() the sum of integers from 1 to n
+   * if n is not given, respond with 0
+   * e.g. /sumup?n=4 => 10
+   */
 })
 
 app.get('/multiply/:x/:y', (req, res) => {
-  // TODO
-  // Responds with the product of x and y
-  // e.g.: GET /multiply/5/4 should respond with '20'
+  /**
+   * This endpoint responds with the product of x and y
+   * e.g. /multiply/:3/:5 => 15
+   */
 })
 
-// don't change below:
 export default app
