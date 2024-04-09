@@ -17,71 +17,10 @@ with the Nozama database, so they can build their own applications on top of it.
 Please note that this repo is for learning purposes. It contains plenty of bad
 security practices, and should not be used in production.
 
-## Database schema
-
-This diagram will help you understand how the different tables in the database
-are related to each other, and what data is stored in each table.
-
-```mermaid
-erDiagram
-    USERS ||--o{ REVIEWS : writes
-    PRODUCTS ||--o{ REVIEWS : has
-    PRODUCTS ||--|{ PRODUCT_CATEGORIES : categorized_by
-    CATEGORIES ||--|{ PRODUCT_CATEGORIES : categorizes
-
-    USERS {
-        string id PK
-        string username
-        string email
-        string firstName
-        string lastName
-        string avatar
-        string password
-    }
-
-    PRODUCTS {
-        string id PK
-        string name
-        string description
-        float price
-        int stockQuantity
-    }
-
-    CATEGORIES {
-        string id PK
-        string name
-        string description
-    }
-
-    PRODUCT_CATEGORIES {
-        string productId FK
-        string categoryId FK
-    }
-
-    REVIEWS {
-        string id PK
-        string productId FK
-        string userId FK
-        int rating
-        string reviewText
-        datetime reviewDate
-    }
-```
-
-## API Documentation
-
-The [API documentation](https://nozama-api.netlify.app/) contains information
-about the endpoints that this project is planning to expose. You can use this to
-understand the inputs and outputs of each endpoint.
-
-This documentation gives you an idea of what the API will look like when it is
-complete, and will be a useful reference as you work on the database and
-creating the API itself.
-
 ## Getting started
 
-1. Fork this repo. If working in a team, make sure to add your teammates as
-   collaborators on your fork.
+1. Fork this repo. If working in a team, one person should fork it and make sure
+   to add your teammates as collaborators on this fork.
 
 2. Clone the repo and install dependencies:
 
@@ -100,8 +39,24 @@ You will find documentation URLs in the exercise files.
 ### Day 1
 
 These exercises guide you through setting up the connection to the database, and
-creating the first few model methods.
+creating the first few model methods. Head to `exercises/d1e1.md` to get
+started.
+
+Once you have completed the exercises, you should be able to start working in
+the `models` folder, so head to `CONTRIBUTING.md` for more information.
 
 ### Day 2
 
 The exercises give you some practice creating and configuring an Express app.
+Head to `exercises/d2e1.js` to get started.
+
+Once you have finished, you should be able to start working on the API
+endpoints, so head to `CONTRIBUTING.md` for more information.
+
+### Day 3
+
+The exercises will demonstrate some ways we can refactor our app to make it more
+robust and better organised. Head to `exercises/d3e1.js` to get started.
+
+When you're done, you are ready to refactor the Nozama app using routes and
+error handling. Head to `CONTRIBUTING.md` for more information.
