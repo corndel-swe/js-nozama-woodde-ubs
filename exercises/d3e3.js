@@ -9,7 +9,10 @@ const router = Router()
 router.put('/username', (req, res) => {
   /**
    * Attempt to call Account.updateUsername with the newUsername and
-   * password found in the req.body
+   * password found in the req.body. 
+   *
+   * On success, respond with the new username in the response body.
+   * E.g. { username: 'NewUsername'}
    *
    * In case this fails, use try/catch to respond with the error
    * code and message found in the error
