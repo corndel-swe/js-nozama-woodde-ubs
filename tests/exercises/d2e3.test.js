@@ -28,25 +28,21 @@ describe('Alarms API endpoints', function () {
     )
   })
 
-  it('GET /alarms/:index should return a specific alarm', function () {
-    request
+  it('GET /alarms/:index should return a specific alarm', async function () {
+    const response = await request
       .get('/alarms/0')
       .expect('Content-Type', /json/)
       .expect(200)
-      .end((err, res) => {
-        if (err) return done(err)
-        assert.strictEqual(
-          res.body.time,
-          '08:30',
-          'Should return the first alarm'
-        )
-        assert.strictEqual(
-          res.body.message,
-          'Wake up!',
-          'Should return the correct message'
-        )
-        done()
-      })
+    assert.strictEqual(
+      response.body.time,
+      '08:30',
+      'Should return the first alarm'
+    )
+    assert.strictEqual(
+      response.body.message,
+      'Wake up!',
+      'Should return the correct message'
+    )
   })
 
   it('POST /alarms should add a new alarm', async function () {
@@ -55,12 +51,12 @@ describe('Alarms API endpoints', function () {
       message: 'Lunch break!'
     }
 
-    const postResponse = await request(app)
+    const postResponse = await request
       .post('/alarms')
       .send(newAlarm)
       .expect(201)
 
-    const getResponse = await request(app)
+    const getResponse = await request
       .get('/alarms')
       .expect('Content-Type', /json/)
       .expect(200)

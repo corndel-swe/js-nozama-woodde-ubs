@@ -6,7 +6,6 @@
   "main": "index.js",
   "scripts": {
     "db:reset": "sqlite3 db/db.sqlite < db/migrations/1-reset.sql",
-    "db:seed": "sqlite3 db/db.sqlite < db/migrations/2-seed.sql",
     "dev": "nodemon server/run.js",
     "start": "node server/run.js",
     "test": "mocha --require ./tests/hooks.js ./tests/*",
@@ -17,7 +16,7 @@
     "test:d1e3": "mocha --require ./tests/hooks.js ./tests/exercises/d1e3.test.js",
     "test:d2e1": "mocha ./tests/exercises/d2e1.test.js",
     "test:d2e2": "mocha ./tests/exercises/d2e2.test.js",
-    "test:d2e3": "mocha ./tests/exercises/d3e1.test.js",
+    "test:d2e3": "mocha ./tests/exercises/d2e3.test.js",
     "test:d3e1": "mocha ./tests/exercises/d3e1.test.js",
     "test:d3e2": "mocha ./tests/exercises/d3e2.test.js",
     "test:d3e3": "mocha ./tests/exercises/d3e3.test.js"
