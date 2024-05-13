@@ -1,5 +1,16 @@
 # Contributing
 
+## Trello Board
+
+The backlog for this repo is available as a
+[Trello board](https://trello.com/b/xKHlc7Xy/nozama). This is a public template.
+
+1. One person on your team should create a new board from this template
+
+2. Then add the rest of your team as members.
+
+You can then use this board to track your progress throughout the workshop.
+
 ## Database schema
 
 This diagram will help you understand how the different tables in the database
@@ -60,17 +71,6 @@ understand the inputs and outputs of each endpoint.
 This documentation gives you an idea of what the API will look like when it is
 complete, and will be a useful reference as you work on the database and
 creating the API itself.
-
-## Trello Board
-
-The backlog for this repo is available as a
-[Trello board](https://trello.com/b/xKHlc7Xy/nozama). This is a public template.
-
-1. One person on your team should create a new board from this template
-
-2. Then add the rest of your team as members.
-
-You can then use this board to track your progress throughout the workshop.
 
 ## Workshops
 
