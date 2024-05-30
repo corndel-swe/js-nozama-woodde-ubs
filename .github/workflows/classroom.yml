@@ -1,0 +1,110 @@
+name: Autograding Tests
+'on':
+  - push
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: d1e1
+        id: d1e1
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: d1e1
+          setup-command: npm install
+          command: npm run test:d1e1
+          timeout: 10
+          max-score: 1
+      - name: d1e2
+        id: d1e2
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: d1e2
+          setup-command: npm install
+          command: npm run test:d1e2
+          timeout: 10
+          max-score: 1
+      - name: d1e3
+        id: d1e3
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: d1e3
+          setup-command: npm install
+          command: npm run test:d1e3
+          timeout: 10
+          max-score: 1
+      - name: d2e1
+        id: d2e1
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: d2e1
+          setup-command: npm install
+          command: npm run test:d2e1
+          timeout: 10
+          max-score: 1
+      - name: d2e2
+        id: d2e2
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: d2e2
+          setup-command: npm install
+          command: npm run test:d2e2
+          timeout: 10
+          max-score: 1
+      - name: d2e3
+        id: d2e3
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: d2e3
+          setup-command: npm install
+          command: npm run test:d2e3
+          timeout: 10
+          max-score: 1
+      - name: d3e1
+        id: d3e1
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: d3e1
+          setup-command: npm install
+          command: npm run test:d3e1
+          timeout: 10
+          max-score: 1
+      - name: d3e2
+        id: d3e2
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: d3e2
+          setup-command: npm install
+          command: npm run test:d3e2
+          timeout: 10
+          max-score: 1
+      - name: d3e3
+        id: d3e3
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: d3e3
+          setup-command: npm install
+          command: npm run test:d3e3
+          timeout: 10
+          max-score: 1
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          D1E1_RESULTS: '${{steps.d1e1.outputs.result}}'
+          D1E2_RESULTS: '${{steps.d1e2.outputs.result}}'
+          D1E3_RESULTS: '${{steps.d1e3.outputs.result}}'
+          D2E1_RESULTS: '${{steps.d2e1.outputs.result}}'
+          D2E2_RESULTS: '${{steps.d2e2.outputs.result}}'
+          D2E3_RESULTS: '${{steps.d2e3.outputs.result}}'
+          D3E1_RESULTS: '${{steps.d3e1.outputs.result}}'
+          D3E2_RESULTS: '${{steps.d3e2.outputs.result}}'
+          D3E3_RESULTS: '${{steps.d3e3.outputs.result}}'
+        with:
+          runners: d1e1,d1e2,d1e3,d2e1,d2e2,d2e3,d3e1,d3e2,d3e3
