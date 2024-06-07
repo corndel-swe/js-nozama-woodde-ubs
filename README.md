@@ -14,8 +14,10 @@ This repo contains the source code for the Nozama backend, which is built using
 Node.js, Express, and Knex. It is an API which allows developers to interact
 with the Nozama database, so they can build their own applications on top of it.
 
-Please note that this repo is for learning purposes. It contains plenty of bad
-security practices, and should not be used in production.
+> [!CAUTION]
+>
+> Please note that this repo is for learning purposes. It contains plenty of bad
+> security practices, and should not be used in production.
 
 ## Getting started
 
@@ -50,10 +52,11 @@ security practices, and should not be used in production.
 
 ## Exercises
 
-Take a look in the `exercises` directory for information on the deep dives. As
-usual, Day 1 Exercise 1 is labeled `d1e1` and can be tested with
-`npm run test:d1e1`. Everything you need (including documentation URLs) should
-be in the `exercises` folder.
+Take a look in the `exercises` directory for information on the deep dives.
+
+Day 1 Exercise 1 is labeled `d1e1` and can be tested with `npm run test:d1e1`.
+
+Everything you need (including documentation URLs) is in the `exercises` folder.
 
 ## Workshops
 

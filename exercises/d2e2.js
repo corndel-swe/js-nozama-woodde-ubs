@@ -1,6 +1,3 @@
-// https://tech-docs.corndel.com/express/query-params.html
-// https://tech-docs.corndel.com/express/url-params.html
-
 import express from 'express'
 const app = express()
 
@@ -9,6 +6,7 @@ const app = express()
  * convert your result to a string before using res.send()
  */
 
+// https://tech-docs.corndel.com/express/query-params.html
 app.get('/sumup', (req, res) => {
   /**
    * This endpoint accepts a query param, n
@@ -18,6 +16,7 @@ app.get('/sumup', (req, res) => {
    */
 })
 
+// https://tech-docs.corndel.com/express/query-params.html
 app.get('/multiply/:x/:y', (req, res) => {
   /**
    * This endpoint responds with the product of x and y
