@@ -11,14 +11,14 @@ const account = new Account('legolas', 'legolas@thefellowship.com', 'elf4life')
 
 router.put('/username', (req, res) => {
   /**
-   * Attempt to call Account.updateUsername with the newUsername and
+   * Use try/catch to attempt account.updateUsername with the newUsername and
    * password found in the req.body.
    *
-   * On success, respond with the newUsername in the response.
-   * E.g. { username: 'NewUsername'}
+   * On success, respond with the newUsername in the response,
+   * e.g. { username: 'NewUsername'}
    *
-   * In case this fails, use try/catch to respond with the error
-   * code and message found in the error
+   * In case this fails, set the status of the response to the error code
+   * and send a useful message.
    */
 })
 
