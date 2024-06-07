@@ -26,6 +26,9 @@ Follow the specification in the
 You probably have a few cards in the "Blocked" column. Today, you'll be
 finishing them off. Take a card from "Blocked" and put it in "Doing".
 
+To manually test your endpoints, use a client such as
+[Thunderclient](vscode:extension/rangav.vscode-thunder-client).
+
 When you're done with a card, use the "Review" and "Done" columns to help
 organise your teamwork.
 
