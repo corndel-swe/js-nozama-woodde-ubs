@@ -44,7 +44,8 @@ Some refactors you should consider:
   [errors and error handling](https://tech-docs.corndel.com/express/sending-errors.html)
 
 - Adding
-  [validation to the API](https://tech-docs.corndel.com/express/schema-validation.html)
+  [validation to the API](https://tech-docs.corndel.com/express/schema-validation.html).
+  Note that some schemas are already written in `spec/schemas.js`.
 
 - Adding new endpoints to the API
 
