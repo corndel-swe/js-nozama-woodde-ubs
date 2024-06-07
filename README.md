@@ -47,8 +47,7 @@ with the Nozama database, so they can build their own applications on top of it.
    npm run dev
    ```
 
-   and visit [http://localhost:5000/ping](http://localhost:5000/ping) in your
-   browser. You should see `'pong'`.
+   and visit [http://localhost:5000/](http://localhost:5000/) in your browser.
 
 ## Exercises
 

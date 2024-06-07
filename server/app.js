@@ -3,8 +3,9 @@ import express from 'express'
 const app = express()
 app.use(express.json())
 
-app.get('/ping', (req, res) => {
-  res.json({ msg: 'pong', time: Date.now() })
+// You can delete this endpoint
+app.get('/', (req, res) => {
+  res.json({ msg: 'Welcome to Nozama!', time: Date.now() })
 })
 
 // TODO: add endpoints during the workshop
