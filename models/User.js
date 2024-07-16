@@ -14,7 +14,12 @@ class User {
     /**
      * TODO: finish this method
      */
+    const query = 'SELECT id, username, firstName, lastName, email, avatar FROM users WHERE id = ?'
+    const results = await db.raw(query, [id])
+    return results[0]
   }
 }
+
+// console.log(await User.findById(7))
 
 export default User
