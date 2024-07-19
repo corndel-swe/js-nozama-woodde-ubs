@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "db:reset": "sqlite3 db/db.sqlite < db/migrations/1-reset.sql",
+    "db:seed": "sqlite3 db/db.sqlite < db/migrations/2-seed.sql",
     "dev": "nodemon server/run.js",
     "start": "node server/run.js",
     "test": "mocha --require ./tests/hooks.js ./tests/*",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "mocha": "^10.4.0",
+    "nodeman": "^1.1.2",
     "nodemon": "^3.1.0",
     "supertest": "^6.3.4"
   }
